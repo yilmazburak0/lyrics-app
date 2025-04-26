@@ -5,6 +5,7 @@ import Title from "./components/Title";
 import SearchForm from "./components/SearchForm";
 import LyricsDisplay from "./components/LyricsDisplay";
 import ErrorMessage from "./components/ErrorMessage";
+import { Loading } from "./components/Loading";
 import useLyrics from "./hooks/useLyrics";
 
 export default function Home() {
@@ -18,12 +19,18 @@ export default function Home() {
       
       {error && <ErrorMessage message={error} />}
       
-      {lyrics && (
-        <LyricsDisplay 
-          title={displayInfo.title} 
-          artist={displayInfo.artist} 
-          lyrics={lyrics}
-        />
+      {loading ? (
+        <div className={styles.loadingContainer}>
+          <Loading dark={true} />
+        </div>
+      ) : (
+        lyrics && (
+          <LyricsDisplay 
+            title={displayInfo.title} 
+            artist={displayInfo.artist} 
+            lyrics={lyrics}
+          />
+        )
       )}
     </div>
   );

@@ -9,3 +9,9 @@
   margin-bottom: 2rem;
   color: var(--foreground);
 }
+
+.loadingContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
