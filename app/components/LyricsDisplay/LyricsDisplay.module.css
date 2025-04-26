@@ -1,0 +1,15 @@
+.lyricsContainer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--background-accent);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lyrics {
+    white-space: pre-wrap;
+    font-family: var(--font-geist-sans);
+    line-height: 1.6;
+    margin-top: 1rem;
+    overflow-wrap: break-word;
+  }
