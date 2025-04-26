@@ -8,14 +8,13 @@
   display: inline-block;
   width: 22px;
   height: 22px;
-  border: 2px solid rgba(255, 255, 255, 0.3); /* Daha görünür beyaz border */
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  border-top-color: white; /* Border topunu tamamen beyaz yap */
+  border-top-color: white;
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spin 1s ease-in-out infinite;
 }
 
-/* Inside a button with dark background */
 :global(.button) .loading {
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-top-color: white;
@@ -23,7 +22,7 @@
 
 .dark {
   border: 2px solid rgba(0, 0, 0, 0.3);
-  border-top-color: #333; /* Koyu renk top border */
+  border-top-color: #333;
 }
 
 /* Small Phones (320px - 480px) */

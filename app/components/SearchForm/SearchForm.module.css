@@ -110,8 +110,8 @@
 
 /* Button in loading state özel stili */
 .button:disabled {
-  background-color: var(--accent); /* Devre dışı olduğunda gri yerine accent rengi kullanalım */
-  opacity: 0.85; /* Tam opacity yerine hafif azaltılmış */
+  background-color: var(--accent);
+  opacity: 0.85;
   cursor: not-allowed;
 }
 
@@ -125,9 +125,9 @@
 .loadingText {
   margin-left: var(--space-xs);
   font-size: var(--font-size-sm);
-  color: white; /* Beyaz renk belirtiyoruz */
-  font-weight: 500; /* Biraz daha kalın yazı */
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Hafif gölge ekleyerek okunurluğu artırıyoruz */
+  color: white; 
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 480px) {
