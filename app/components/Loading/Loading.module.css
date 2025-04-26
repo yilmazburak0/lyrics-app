@@ -1,0 +1,70 @@
+.loadingWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Daha görünür beyaz border */
+  border-radius: 50%;
+  border-top-color: white; /* Border topunu tamamen beyaz yap */
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+/* Inside a button with dark background */
+:global(.button) .loading {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+}
+
+/* Small Phones (320px - 480px) */
+@media screen and (max-width: 480px) {
+  .loading {
+    width: 18px;
+    height: 18px;
+    border-width: 1.5px;
+  }
+}
+
+/* Phones (481px - 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  .loading {
+    width: 20px;
+    height: 20px;
+    border-width: 1.7px;
+  }
+}
+
+/* Tablets (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .loading {
+    width: 22px;
+    height: 22px;
+    border-width: 2px;
+  }
+}
+
+/* Small Laptops (1025px - 1366px) */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .loading {
+    width: 22px;
+    height: 22px;
+    border-width: 2px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}

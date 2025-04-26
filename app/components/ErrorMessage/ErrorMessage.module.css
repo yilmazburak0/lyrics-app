@@ -1,8 +1,46 @@
 .error {
-    padding: 0.75rem;
-    background-color: #fee2e2;
-    color: #b91c1c;
-    border-radius: 4px;
-    margin-bottom: 1.5rem;
-    font-family: var(--font-geist-sans);
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--error-light);
+  color: var(--error);
+  border-left: 4px solid var(--error-border, #ef4444);
+  border-radius: var(--radius, 4px);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-geist-sans);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  box-shadow: var(--shadow-sm, 0 1px 2px rgba(0, 0, 0, 0.05));
+  animation: fadeIn 0.3s ease-in-out;
+  max-width: 100%;
+}
+
+.icon {
+  margin-right: 0.75rem;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  color: var(--error-icon, #dc2626);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .error {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+  }
+}

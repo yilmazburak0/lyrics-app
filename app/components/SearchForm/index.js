@@ -1,6 +1,7 @@
 import styles from './SearchForm.module.css';
 import { IoMdClose } from "react-icons/io";
 import useSearchForm from "../../hooks/useSearchForm";
+import { Loading } from "../Loading";
 
 export default function SearchForm({ onSearch, loading }) {
   const {
@@ -68,7 +69,14 @@ export default function SearchForm({ onSearch, loading }) {
         className={styles.button}
         disabled={loading}
       >
-        {loading ? "Searching..." : "Find Lyrics"}
+        {loading ? (
+          <span className={styles.loadingContainer}>
+            <Loading />
+            <span className={styles.loadingText}>Loading</span>
+          </span>
+        ) : (
+          "Find Lyrics"
+        )}
       </button>
     </form>
   );

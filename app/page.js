@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "./page.module.css";
+import Title from "./components/Title";
 import SearchForm from "./components/SearchForm";
 import LyricsDisplay from "./components/LyricsDisplay";
 import ErrorMessage from "./components/ErrorMessage";
@@ -11,7 +12,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Lyrics Finder</h1>
+      <Title>Lyrics Finder</Title>
       
       <SearchForm onSearch={fetchLyrics} loading={loading} />
       
